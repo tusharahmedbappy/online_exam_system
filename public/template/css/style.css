@@ -1,0 +1,168 @@
+/* body{
+    font-family: 'Courier New', Courier, monospace;
+} */
+body {
+    margin: 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #525f7f;
+    text-align: left;
+    background-color: #ffffff !important;
+}
+.card-body img {
+    height: 250px;
+    width: 100%;
+}
+hr {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px solid rgba(43, 43, 43, 0.1);
+}
+.navbar-brand h2{
+    font-family: cursive;
+}
+
+/* responsibe */
+@media only screen and (max-width: 450px){
+    .mainBody {
+        background-image: url(../img/theme/mobile.png);
+        background-size: 94% 88%;
+        height: 653px;
+        background-repeat: no-repeat;
+        margin-left: 50px;
+    }
+    .col-md-10{
+        padding-left:0px !important;
+    }
+    .contentBody {
+        background-image: linear-gradient(#f1c5c5e0,#79f0ff);
+        height: 504px;
+        margin-left: -6px;
+        border-radius: 9px;
+        padding-left: 3px;
+        overflow: scroll;
+    }
+    .padding-5 {
+        flex: 0 0 61.333333%;
+        max-width:  100% !important;
+    }
+    .padding-5{
+        padding-top:33px;
+    }
+    .registerBtn {
+        position: relative;
+        left: 17px;
+        top: 75px;
+    }
+    .loginBtn {
+        position: relative;
+        left: 23px;
+        top: 19px;
+    }
+    .card-body img {
+        display: none;
+    }
+    .optional {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px){
+    .mainBody {
+        background-image: url(../img/theme/tablet.png);
+        background-size: 100% 80%;
+        height: 656px;
+        background-repeat: no-repeat;
+        margin-left: 0px;
+    }
+    .col-md-10 {
+        padding-right: 76px !important;
+        padding-left: 0px !important;
+    }
+    .contentBody {
+        background-image: linear-gradient(#f1c5c5e0,#79f0ff);
+        height: 383px;
+        margin-left: 5px;
+        overflow: scroll;
+    }
+    .padding-5 {
+        padding-top: 71px;
+    }
+    .padding-5 {
+        flex: 0 0 61.333333%;
+        max-width: 100% !important;
+    }
+    .registerBtn {
+        position: relative;
+        left: 250px;
+        top: 3px;
+    }
+    .loginBtn {
+        position: relative;
+        left: 250px;
+        top: -44px;
+    }
+}
+@media only screen and (min-width: 992px){
+    .mainBody {
+        background-image: url(../img/theme/macbook_PNG45.png);
+        background-size: 100% 100%;
+        height: 745px;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+    }
+    .col-md-10{
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .padding-5 {
+        flex: 0 0 61.333333%;
+        max-width: 79.462294% !important;
+    }
+    .padding-5{
+        padding-top:45px;
+    }
+    .contentBody {
+        background-image: linear-gradient(#f1c5c5e0,#79f0ff);
+        height: 504px;
+        margin-left: 5px;
+        overflow: scroll;
+    }
+    .registerBtn {
+        position: relative;
+        left: 440px;
+        top: 124px;
+    }
+    .loginBtn {
+        position: relative;
+        left: 460px;
+        top: 66px;
+    }
+}
+/* @media only screen and (min-width: 1200px){
+    .mainBody {
+        background-image: url(../img/theme/macbook_PNG45.png);
+        background-size: 100% 100%;
+        height: 745px;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+    }
+    .col-md-10{
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .padding-5 {
+        flex: 0 0 61.333333%;
+        max-width: 79.462294% !important;
+    }
+    .padding-5{
+        padding-top:45px;
+    }
+    .contentBody {
+        background-image: linear-gradient(#f1c5c5e0,#79f0ff);
+        height: 504px;
+        margin-left: 5px;
+    }
+} */
