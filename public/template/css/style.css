@@ -15,6 +15,17 @@ body {
     height: 250px;
     width: 100%;
 }
+ul li {
+    list-style: none;
+}
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+    height: 16px;
+    width: 20px;
+    cursor: pointer;
+}
+
 hr {
     margin-top: 1rem !important;
     margin-bottom: 2rem;

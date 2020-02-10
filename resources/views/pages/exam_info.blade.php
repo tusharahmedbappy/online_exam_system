@@ -7,6 +7,6 @@
                 <strong>Number of questions : 10</strong><br>
                 <strong>Question type :</strong><span>Multiple choice</span><br>
         </div>
-        <a href="" class="btn btn-warning px-5">Start test</a>
+        <a href="{{url('/questions',1)}}" class="btn btn-warning px-5">Start test</a>
     </div>
 @endsection

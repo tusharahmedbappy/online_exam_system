@@ -14,16 +14,16 @@
                             <label for="qnumber">Ques No:</label>
                         </div>
                         <?php
-                            $quesrow = DB::table('ques_table')->count();
+                            $quesrow = DB::table('questions')->count();
                             $ques_no = $quesrow +1;
                         ?>
 
                         <div class="col-md-4 row">
-                            <input type="number" 
-                                id="qnumber" 
-                                class="form-control" 
+                            <input type="number"
+                                id="qnumber"
+                                class="form-control"
                                 name="quesNumber"
-                                placeholder="Ques. no" 
+                                placeholder="Ques. no"
                                 required
                                 value="{{$ques_no}}"
                                 >
@@ -37,10 +37,10 @@
                             <label for="question">Question</label>
                         </div>
                         <div class="col-md-9 row">
-                            <input type="text" 
-                                id="question" 
-                                class="form-control" 
-                                name="question" 
+                            <input type="text"
+                                id="question"
+                                class="form-control"
+                                name="question"
                                 required
                                 placeholder="Question"
                                 >
@@ -59,10 +59,10 @@
                                     <label for="option1" class="text-warning">
                                         <small>Option 1</small>
                                     </label>
-                                    <input type="text" 
-                                        class="form-control" placeholder="Option 1" 
+                                    <input type="text"
+                                        class="form-control" placeholder="Option 1"
                                         id="option1"
-                                        name="option1" 
+                                        name="option1"
                                         required
                                         >
                                 </div>
@@ -71,10 +71,10 @@
                                     <label for="option2" class="text-warning">
                                         <small>Option 2</small>
                                     </label>
-                                    <input type="text" 
-                                        required 
-                                        class="form-control" 
-                                        id="option2" 
+                                    <input type="text"
+                                        required
+                                        class="form-control"
+                                        id="option2"
                                         placeholder="option 2"
                                         name="option2"
                                         >
@@ -84,10 +84,10 @@
                                     <label for="option3" class="text-warning">
                                         <small>Option 3</small>
                                     </label>
-                                    <input type="text" 
-                                        required 
-                                        class="form-control" 
-                                        id="option3" 
+                                    <input type="text"
+                                        required
+                                        class="form-control"
+                                        id="option3"
                                         placeholder="option 3"
                                         name="option3"
                                         >
@@ -96,10 +96,10 @@
                                     <label for="option4" class="text-warning">
                                         <small>Option 4</small>
                                     </label>
-                                    <input type="text" 
-                                        required 
-                                        class="form-control" 
-                                        id="option4" 
+                                    <input type="text"
+                                        required
+                                        class="form-control"
+                                        id="option4"
                                         placeholder="option 4"
                                         name="option4">
                                 </div>
@@ -107,11 +107,11 @@
                                     <label for="right_ans" class="text-warning">
                                         <small>Right Answer</small>
                                     </label>
-                                    <input type="number" 
-                                        required 
-                                        class="form-control" 
+                                    <input type="number"
+                                        required
+                                        class="form-control"
                                         placeholder="Option no."
-                                        id="right_ans" 
+                                        id="right_ans"
                                         name="right_ans"
                                     >
                                 </div>

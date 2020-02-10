@@ -32,3 +32,5 @@ Route::post('/login','AuthController@login_action');
 
 // exam route
 Route::get('/exam-info','ExamController@exam_info');
+Route::get('/questions/{id}','ExamController@question_list');
+Route::post('/next/question','ExamController@next');

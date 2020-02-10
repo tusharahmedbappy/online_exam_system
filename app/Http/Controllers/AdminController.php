@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Admin_login;
+use Illuminate\Http\Request;
 use Session;
 use DB;
 class AdminController extends Controller
@@ -18,8 +18,14 @@ class AdminController extends Controller
     }
     public function admin_login(Request $request)
     {
+        $validate = $request->validate(
+            [
+                'email' => 'required ||email',
+                'password' => 'required',
+            ]
+        );
 
-        if(!empty($request->email) && !empty($request->password)){
+        if($validate){
             $verify = Admin_login::where('email',$request->email)->where('password',$request->password)->first();
             if($verify){
                 Session::put('adminUser',$request->email);
@@ -27,9 +33,6 @@ class AdminController extends Controller
             }else{
                 return back()->with('notmatch','Your email and password are incorrect!');
             }
-        }else{
-            return  back()->with('email','Email field is required!')
-                        ->with('password','Password field is required!');
         }
     }
 
@@ -70,7 +73,7 @@ class AdminController extends Controller
                 'ques_no' => $ques_no,
                 'question' => $question,
             ];
-            $insert_question = DB::table('ques_table')->insert($ques_data);
+            $insert_question = DB::table('questions')->insert($ques_data);
             if($insert_question){
                 foreach($ans as $key => $optionName){
                     if($right_ans == $key){
@@ -79,7 +82,7 @@ class AdminController extends Controller
                             'right_ans' => 1,
                             'ans' => $optionName
                         ];
-                        
+
                     }else{
                         $ans_data = [
                             'ques_no' => $request->quesNumber,
@@ -87,15 +90,15 @@ class AdminController extends Controller
                             'ans' => $optionName
                         ];
                     }
-                    $insert_ans = DB::table('ans_table')->insert($ans_data);
+                    $insert_ans = DB::table('answers')->insert($ans_data);
                         if($insert_ans){
                             continue;
                         }
-              } 
+              }
               return back()->with('added','Question added success!');
             }
         }
     }
 
-   
+
 }

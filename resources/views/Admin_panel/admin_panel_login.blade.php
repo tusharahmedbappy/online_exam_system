@@ -20,11 +20,11 @@
                     </div>
                     <input class="form-control" name="email" placeholder="Email" type="email">
                 </div>
-                @if (session('email'))
+                @error('email')
                 <small class="text-danger">
-                    {{session('email')}}
+                    {{$message}}
                 </small>
-                @endif
+                @enderror
 
             </div>
             <div class="form-group">
@@ -34,11 +34,11 @@
                     </div>
                     <input class="form-control" name="password" placeholder="Password" type="password">
                 </div>
-                @if (session('password'))
+                @error('password')
                 <small class="text-danger">
-                    {{session('password')}}
+                    {{$message}}
                 </small>
-                @endif
+                @enderror
             </div>
             <div class="custom-control custom-control-alternative custom-checkbox">
                 <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
