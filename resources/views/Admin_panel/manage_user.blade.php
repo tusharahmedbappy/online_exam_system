@@ -18,10 +18,11 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @foreach (\App\Model\Register::get() as $userData)
                             <tr>
-                                <th scope="row">01</th>
-                                <td>Tushar</td>
-                                <td><a href="">tusharahmed@gmail.com</a></td>
+                                <th scope="row">0{{$userData->id}}</th>
+                                <td>{{$userData->name}}</td>
+                                <td><a href="">{{$userData->email}}</a></td>
                                 <td class="text-center">
                                     <a class="btn btn-success btn-sm" href="">
                                         Desable
@@ -31,19 +32,7 @@
                                         </a>
                                 </td>
                             </tr>
-                            <tr>
-                                    <th scope="row">01</th>
-                                    <td>Ariyat</td>
-                                    <td><a href="">ariyatsinha@gmail.com</a></td>
-                                    <td class="text-center">
-                                        <a class="btn btn-warning btn-sm" href="">
-                                            Enable
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="">
-                                                Remove
-                                            </a>
-                                    </td>
-                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

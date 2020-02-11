@@ -25,23 +25,20 @@
                         </a>
                     </div>
                 </div>
-                =>
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
                                 <th width="4%" scope="col">Q.No</th>
                                 <th scope="col">Questions</th>
-                                <th width="10%" scope="col">Right ans.</th>
                                 <th scope="col" class="text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                        @foreach (\App\Model\Question::paginate(10) as $userData)
                             <tr>
-                                <th scope="row">01</th>
-                                <td>What is Laravel ?</td>
-                                <td>Framework</td>
+                                <th scope="row">{{$userData->id}}</th>
+                                <td>{{$userData->question}} ?</td>
                                 <td class="text-center">
                                     <a class="btn btn-success btn-sm" href="">
                                         <i class="fa fa-check"></i>
@@ -54,22 +51,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">01</th>
-                                <td>Laravel created by?</td>
-                                <td>Taylor otwell</td>
-                                <td class="text-center">
-                                    <a class="btn btn-warning btn-sm" href="">
-                                        <i class="fa fa-unlock"></i>
-                                    </a>
-                                    <a class="btn btn-info btn-sm" href="">
-                                        <i class="fa fa-edit"></i>
-                                    </a>
-                                    <a class="btn btn-danger btn-sm" href="">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -86,11 +68,11 @@
                                 <a class="page-link" href="#">1</a>
                             </li>
                             <li class="page-item">
-                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                <a class="page-link" href="http://laravel.app?page=2">2 <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="http://laravel.app?page=3">3</a></li>
                             <li class="page-item">
-                                <a class="page-link" href="#">
+                                <a class="page-link" href="http://laravel.app?page=4">
                                     <i class="fas fa-angle-right"></i>
                                     <span class="sr-only">Next</span>
                                 </a>

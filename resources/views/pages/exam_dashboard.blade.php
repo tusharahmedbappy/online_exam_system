@@ -2,7 +2,7 @@
 @section('content')
 <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-light">
         <div class="container px-4">
-        <a class="navbar-brand" href="{{url('/admin')}}">
+        <a class="navbar-brand" href="{{url('/start-exam')}}">
                 <h2>
                     <span class="text-danger">O</span>-<span class="text-primary">E</span>-<span
                         class="text-info">S</span>
@@ -53,7 +53,14 @@
                         <a class="nav-link nav-link-icon" href="" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <i class="text-info ni ni-single-02"></i>
-                            <span class="nav-link-inner--text">Tushar</span>
+                            <span class="nav-link-inner--text">
+                                <?php
+                                    $userData = \App\Model\Register::where('email',Session::get('username'))->first();
+                                ?>
+                                @if(Session::get('username'))
+                                    {{$userData->name}}
+                                @endif
+                            </span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
@@ -69,7 +76,7 @@
                                 <span>Edit profile</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="{{url('/user-logout')}}" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
                                 <span>Logout</span>
                             </a>

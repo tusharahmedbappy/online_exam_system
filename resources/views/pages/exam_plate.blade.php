@@ -11,9 +11,13 @@
 
                         </div>
                         <h2 class="pl-3">Ques {{$quesData->ques_no}}:- {{$quesData->question}}
+                            @error('question')
+                            <p class="text-danger">Please Select an Answer</p>
+                            @enderror
                             <hr>
                         </h2>
-                        <input type="hidden" name="questin_id" value="{{$quesData->ques_no}}">
+
+                        <input type="hidden" name="question_id" value="{{$quesData->ques_no}}">
                     @endforeach
                     <div class="">
                         @foreach ($answer as $ansData)
@@ -27,7 +31,7 @@
                         </ul>
                         @endforeach
                     </div>
-                    <button class="btn btn-default px-5">Next</button>
+                    <button class="btn btn-default px-5">Next Question</button>
                 </form>
             </div>
         </div>

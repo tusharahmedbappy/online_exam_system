@@ -29,8 +29,17 @@ Route::group(['middleware' => ['admincheck']],function(){
 Route::get('/register','AuthController@register');
 Route::get('/','AuthController@login_ui');
 Route::post('/login','AuthController@login_action');
+Route::post('register/submit','AuthController@register_singup');
 
-// exam route
-Route::get('/exam-info','ExamController@exam_info');
-Route::get('/questions/{id}','ExamController@question_list');
-Route::post('/next/question','ExamController@next');
+Route::group(['middleware' => 'userCheck'], function () {
+    // exam route
+    Route::get('/start-exam','ExamController@start_exam');
+    Route::get('/exam-info','ExamController@exam_info');
+    Route::get('/questions/{id}','ExamController@question_list');
+    Route::post('/next/question','ExamController@next');
+    Route::get('/user-logout','AuthController@logout');
+    Route::get('/result','ExamController@result');
+    Route::get('/view-right-ans','ExamController@view_ans');
+});
+
+

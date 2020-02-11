@@ -15,6 +15,9 @@
                     </div>
                     <input class="form-control" name="email" placeholder="Email" type="email">
                 </div>
+                @error('email')
+                <strong class="text-danger">{{$message}}</strong>
+                @enderror
             </div>
             <div class="form-group">
                 <div class="input-group input-group-alternative">
@@ -23,6 +26,13 @@
                     </div>
                     <input class="form-control" name="password" placeholder="Password" type="password">
                 </div>
+                @error('password')
+                <strong class="text-danger">{{$message}}</strong>
+                @enderror
+                @if(session('incorrect'))
+                    <strong class="text-danger"> {{session('incorrect')}}</strong>
+
+                @endif
             </div>
             <div class="custom-control custom-control-alternative custom-checkbox">
                 <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
@@ -36,7 +46,7 @@
                 <button type="submit" class="btn btn-default px-5 mt-4">Sign in</button>
             </div>
             <div class="registerBtn">
-                    <a href="{{url('/register')}}" class="btn">Create an account_! 
+                    <a href="{{url('/register')}}" class="btn">Create an account_!
                     </a>
             </div>
 
