@@ -21,6 +21,22 @@ Route::group(['middleware' => ['admincheck']],function(){
     Route::get('/ques-list','AdminController@ques_list');
     Route::get('/add-ques','AdminController@add_ques');
     Route::post('/insert-ques','AdminController@insert_ques');
+
+    Route::get('/published-ques',function (){
+         return view('Admin_panel.Pages.Publish_ques');
+    });
+    Route::get('/draft-ques',function (){
+        return view('Admin_panel.Pages.Draft_ques');
+    });
+    Route::get('/trash-ques',function (){
+        return view('Admin_panel.Pages.Deleted_ques');
+    });
+    Route::get('/ques_publish/{id}','AdminController@ques_publish');
+    Route::get('/ques_unpublished/{id}','AdminController@ques_unpublished');
+    Route::get('/ques_delete/{id}','AdminController@ques_delete');
+    Route::get('/ques_edit/{id}','AdminController@ques_edit');
+    Route::get('/ques-undo/{id}','AdminController@ques_undo');
+    Route::get('/delete/{id}','AdminController@delete');
 });
 
 

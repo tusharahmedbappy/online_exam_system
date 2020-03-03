@@ -3,19 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0eb81829-c122-41b5-bd32-976b6d670d97" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Ans_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Ques_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/template/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExamSystem.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_10_142534_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_10_142534_create_questions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Admin_panel/allQues.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin_panel/allQues.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin_panel/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin_panel/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin_panel/manage_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin_panel/manage_user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/exam_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/exam_dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/exam_plate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/exam_plate.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +116,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Vf8doPgj7nDOpprQlmykxTuiWt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -171,7 +166,8 @@
       <updated>1577632884692</updated>
       <workItem from="1577632909310" duration="2305000" />
       <workItem from="1577897159165" duration="44000" />
-      <workItem from="1581343481650" duration="48667000" />
+      <workItem from="1581343481650" duration="49232000" />
+      <workItem from="1583243065556" duration="13088000" />
     </task>
     <servers />
   </component>
@@ -179,17 +175,19 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="319" key="NewPhpFileDialog" timestamp="1581352708955">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="517" y="289" key="NewPhpFileDialog" timestamp="1583245626841">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="517" y="289" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1583245626841" />
     <state x="517" y="319" key="NewPhpFileDialog/0.30.1366.738@0.30.1366.738" timestamp="1581352708955" />
     <state x="269" y="60" width="916" height="708" key="SettingsEditor" timestamp="1577634018428">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="269" y="60" width="916" height="708" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1577634018428" />
-    <state x="379" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1577632921817">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1583243077596">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1583243077596" />
     <state x="379" y="223" key="com.intellij.ide.util.TipDialog/0.30.1366.738@0.30.1366.738" timestamp="1577632921817" />
     <state x="495" y="261" width="707" height="453" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1577633511879">
       <screen x="0" y="30" width="1366" height="738" />

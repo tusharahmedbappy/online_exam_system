@@ -17,6 +17,9 @@ class CreateQuestionsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('ques_no');
             $table->string('question');
+            $table->integer('status');
+            $table->integer('trash_status');
+            $table->integer('draft_status');
             $table->timestamps();
         });
     }
